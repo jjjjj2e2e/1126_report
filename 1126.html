@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+
+    <style>
+        #a{
+            size: 12px;
+            color: blue;
+            
+        }
+        button {
+            border: 0;
+        }
+
+        .menu {
+            max-width: 300px;
+
+        }
+
+        .menu-button {
+            color: blue;
+            border: 1;
+            size: 20px;
+        }
+
+        .menu-item {
+            margin-bottom: 10px;
+        }
+
+        .submenu {
+            margin-left: 20px;
+            display: none;
+        }
+
+        .submenu p,
+        .submenu button {
+            margin-top: 5px;
+            padding-left: 10px;
+        }
+    </style>
+
+</head>
+<p id="a">변수 -</p>
+<body>
+    <div class="menu">
+        <div class="menu-item">
+            <button class="menu-button">1.문법기초</button>
+            <div class="submenu">
+                <button class="menu-button">1.1.1 변수만들기</button>
+                <div class="submenu">
+                    <button class="menu-button">1.1.1 나이가 담긴변수</button>
+                    <div class="submenu">
+                        <p>
+                            &lt;script&gt; <br>
+                            /* <br>
+                            예제01: 여러분의 나이가 담긴 변수 age를 만들어 주세요. <br>
+
+                            */ <br>
+                            var age = 30;<br>
+                            &lt;/script&gt; <br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                        </p>
+                    </div>
+
+                    <button class="menu-button">1.1.2 이름과 나이가 담긴 변수</button>
+                    <div class="submenu">
+                        <p>
+                            &lt;script&gt; <br>
+                            /* <br>
+
+                            예제02: 여러분의 이름과 나이를 저장한 변수를 만들어 주세요. <br>
+
+
+                            */ <br>
+                            var name = "ddandongne"; <br>
+                            var age = 30; <br>
+
+                            &lt;/script&gt; <br>
+                            &lt;/head&gt; <br>
+
+                            &lt;body&gt; <br>
+
+                            &lt;/body&gt; <br>
+
+                            &lt;/html&gt; <br>
+                        </p>
+                    </div>
+
+                    <button class="menu-button">1.1.3 이름 나이가 담긴변수 콤마활용</button>
+                    <div class="submenu">
+                        <p>
+                            &lt;script&gt; <br>
+
+                                /* <br>
+                        
+                                 예제03: 여러분의 이름과 나이를 저장한 변수를 콤마(,)를 이용해서 만들어 주세요. <br>
+                        
+                        
+                                */ <br>
+                                var name = "ddandongne", age = 30; <br>
+                        
+                            &lt;/script&gt; <br>
+                            &lt;/head&gt; <br>
+
+                            &lt;body&gt; <br>
+
+                            &lt;/body&gt; <br>
+
+                            &lt;/html&gt; <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const buttons = document.querySelectorAll('.menu-button');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const nextSubmenu = this.nextElementSibling;
+                        if (nextSubmenu && nextSubmenu.classList.contains('submenu')) {
+                            nextSubmenu.style.display =
+                                nextSubmenu.style.display === 'block' ? 'none' : 'block';
+                        }
+                    });
+                });
+            })
+        </script>
+</body>
+
+</html>
